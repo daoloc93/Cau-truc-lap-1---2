@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Nhập vào một số:</h3>
+<input id="number" type="text">
+<button onclick="check()">Kiểm tra</button>
+<h3 id="result"></h3>
+
+<script>
+
+    function check() {
+        let count = 0;
+        let number = parseInt(document.getElementById("number").value);
+        let result = "";
+
+
+        for (n = 2; n < number; n++) {
+            for (m = 2; m < n; m++) {
+                if (n % m == 0) {
+                    result += m + ", ";
+                }
+            }
+        }
+        result = number;
+        document.getElementById("result").innerHTML = "result =" + result;
+    }
+
+
+</script>
+
+</body>
+</html>
